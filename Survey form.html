@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey Form</title>
+        <style>
+            form {
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                width: 300px;
+                margin: 0 auto;
+                color: blue; 
+            }
+            
+            label {
+                display: block;
+                margin-top: 10px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                width:100%;
+                padding: 5px;
+                margin-top: 5px;
+            }
+
+            select {
+                width: 100%;
+                padding: 5px;
+                margin-top: 5px;
+            }
+
+             input[type="submit"] {
+                margin-top: 10px;
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+
+        </style>
+        <script>
+            function handleSubmit(event) {
+                event.preventDefault(); // Prevent the form from submitting
+    
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var age = document.getElementById('age').value;
+                var gender = document.getElementById('gender').value;
+                var feedback = document.getElementById('feedback').value;
+                var subscribe = document.getElementById('subscribe').checked;
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1 title="hey">Survey Form</h1>
+        <form class=""action="mailto:thissidekiyotaka@gmail.com" method="post">
+
+            <label for="" title="kiyotaka" >Name:</label>
+            <input type="text" id="name" name="name"required title="kuch nahi">
+
+            <label for="">Email:</label>
+            <input type="email" id="email" name="email"required>
+
+            <label for="">Age:</label>
+            <input type="number" id="age" name="age"required>
+
+            <label for="">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label for="">Feedback</label>
+            <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+
+            <label for="">Subscribe to newsletter:</label>
+            <input type="checkbox" id="subscribe" name="subscribe">
+
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
